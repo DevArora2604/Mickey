@@ -85,9 +85,9 @@ async def repo(_, m: Message):
 
 @dev.on_message(filters.new_chat_members)
 async def welcome(_, m: Message):
-    update.effective_chat
-    update.effective_user
-    update.effective_message
+    chat =update.effective_chat
+    user = update.effective_user
+    msg = update.effective_message
     new_members = update.effective_message.new_chat_members
 
     for new_mem in new_members:
