@@ -85,7 +85,7 @@ async def repo(_, m: Message):
 
 @dev.on_message(filters.new_chat_members)
 async def welcome(_, m: Message):
-    for member in new_chat_members
+    for member in m.new_chat_members
         await m.reply_photo(photo="https://te.legra.ph/file/d65295d52d044021af701.jpg", caption=f"Welcome {m.from_user.mention} To {m.chat.id}!")
    
  
