@@ -84,9 +84,10 @@ async def repo(_, m: Message):
 
 
 @dev.on_message(filters.new_chat_members)
-async def welcome(_, m: Message):
+async def welcome(client: MickeyBot, m: Message):
+    chat=await client.get_chat(m.chat.id)
     for member in m.new_chat_members:
-        await m.reply_photo(photo="https://te.legra.ph/file/d65295d52d044021af701.jpg", caption=f"Welcome {m.from_user.mention} To {(m.chat.id).title}!")
+        await m.reply_photo(photo="https://te.legra.ph/file/d65295d52d044021af701.jpg", caption=f"Welcome {m.from_user.mention} To {chat.title}!")
    
  
 
