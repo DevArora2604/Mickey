@@ -85,13 +85,14 @@ async def repo(_, m: Message):
 
 @dev.on_message(filters.new_chat_members)
 async def welcome(_, m: Message):
-    chat = update.effective_chat
-    user = update.effective_user
-    msg = update.effective_message
-    new_members = update.effective_message.new_chat_members
+    for member in new_chat_members
+        await m.reply_photo(photo="https://te.legra.ph/file/d65295d52d044021af701.jpg", caption=f"Welcome {m.from_user.mention} To {m.chat.id}!")
+   
+ 
 
-    for new_mem in new_members:
-        if new_mem.id == OWNER_ID:
-            update.effective_message.reply_text(
-                "Oh, Genos? Let's get this moving.",
-            )
+
+
+
+
+              
+
